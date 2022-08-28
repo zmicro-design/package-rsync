@@ -1,0 +1,17 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro rsync <args ...>"
+  echo ""
+}
+
+core() {
+  sudo rsync "$@"
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"
